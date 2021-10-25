@@ -16,5 +16,10 @@ namespace XadrezConsole.Tabuleiro
             Colunas = colunas;
             Pecas = new Peca[linhas, colunas];
         }
+
+        public Peca retornaPeca(int linha, int coluna)
+        {
+            return Pecas[linha, coluna];
+        }
     }
 }
