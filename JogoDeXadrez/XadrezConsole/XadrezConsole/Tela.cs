@@ -27,6 +27,15 @@ namespace XadrezConsole
             Console.WriteLine("  a b c d e f g h");
         }
 
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+
+            return new PosicaoXadrez(coluna, linha);
+        }
+
         static void ImprimirPeca(Peca peca)
         {
             if (peca.Cores == Cor.Branca)
@@ -34,7 +43,7 @@ namespace XadrezConsole
             else
             {
                 ConsoleColor aux = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write(peca);
                 Console.ForegroundColor = aux;
             }

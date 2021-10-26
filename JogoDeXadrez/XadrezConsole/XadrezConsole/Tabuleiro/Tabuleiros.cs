@@ -28,7 +28,7 @@ namespace XadrezConsole.Tabuleiro
             return Pecas[pos.Linha, pos.Coluna];
         }
 
-        public bool existePeca(Posicao pos)
+        public bool ExistePeca(Posicao pos)
         {
             ValidarPosicao(pos);
             return RetornaPeca(pos) != null;
@@ -36,10 +36,21 @@ namespace XadrezConsole.Tabuleiro
 
         public void ColocarPeca(Peca p, Posicao pos)
         {
-            if (existePeca(pos))
+            if (ExistePeca(pos))
                 throw new TabuleiroException("Já existe uma peça nessa posicão");
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicoes = pos;
+        }
+
+        public Peca RetirarPecas(Posicao pos)
+        {
+            if (RetornaPeca(pos) == null)
+                return null;
+
+            Peca aux = RetornaPeca(pos);
+            aux.Posicoes = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
         }
 
         public bool PosicaoValida(Posicao pos)
