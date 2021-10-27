@@ -14,10 +14,10 @@ namespace XadrezConsole
             Console.WriteLine();
             ImprimriPecasCapturadas(partida);
             Console.WriteLine("Turno: " + partida.Turno);
-            if(!partida.Terminada)
+            if (!partida.Terminada)
             {
                 Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
-                if(partida.Xeque)
+                if (partida.Xeque)
                 {
                     Console.WriteLine("Está em xeque!");
                 }
@@ -43,7 +43,7 @@ namespace XadrezConsole
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
             Console.Write("[");
-            foreach(Peca x in conjunto)
+            foreach (Peca x in conjunto)
             {
                 Console.Write(x + " ");
             }

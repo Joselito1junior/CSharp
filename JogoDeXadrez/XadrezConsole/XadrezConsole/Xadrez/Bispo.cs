@@ -5,7 +5,7 @@ namespace XadrezConsole.Xadrez
 {
     class Bispo : Peca
     {
-        public Bispo(Cor cor, Tabuleiros tab) :base(cor, tab)
+        public Bispo(Cor cor, Tabuleiros tab) : base(cor, tab)
         {
 
         }

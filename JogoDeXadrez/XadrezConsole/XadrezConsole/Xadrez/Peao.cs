@@ -54,10 +54,10 @@ namespace XadrezConsole.Xadrez
                 }
 
                 //# Jogada Especial - Em passant
-                if(Posicoes.Linha == 3)
+                if (Posicoes.Linha == 3)
                 {
                     Posicao esquerda = new Posicao(Posicoes.Linha, Posicoes.Coluna - 1);
-                    if(Tab.PosicaoValida(esquerda) && ExisteInimigo(esquerda) && Tab.RetornaPeca(esquerda) == Partida.VulneravelEmPassant)
+                    if (Tab.PosicaoValida(esquerda) && ExisteInimigo(esquerda) && Tab.RetornaPeca(esquerda) == Partida.VulneravelEmPassant)
                     {
                         mat[esquerda.Linha - 1, esquerda.Coluna] = true;
                     }
@@ -111,7 +111,7 @@ namespace XadrezConsole.Xadrez
                     }
                 }
             }
-                return mat;
+            return mat;
         }
         public override string ToString()
         {

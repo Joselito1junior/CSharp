@@ -42,7 +42,7 @@ namespace XadrezConsole.Xadrez
             }
 
             //# Jogada Especial - Roque Pequeno
-            if(p is Rei && destino.Coluna == origem.Coluna + 2)
+            if (p is Rei && destino.Coluna == origem.Coluna + 2)
             {
                 Posicao origemTorre = new Posicao(origem.Linha, origem.Coluna + 3);
                 Posicao destinoTorre = new Posicao(origem.Linha, origem.Coluna + 1);
@@ -62,12 +62,12 @@ namespace XadrezConsole.Xadrez
             }
 
             //#Jogada Especial - Em passant
-            if(p is Peao)
+            if (p is Peao)
             {
                 if (origem.Coluna != destino.Coluna && pecaCapturada == null)
                 {
                     Posicao posPeao;
-                    if(p.Cores == Cor.Branca)
+                    if (p.Cores == Cor.Branca)
                     {
                         posPeao = new Posicao(destino.Linha + 1, destino.Coluna);
                     }
@@ -113,13 +113,13 @@ namespace XadrezConsole.Xadrez
             }
 
             //#Jogada Especial - Em passant
-            if(p is Peao)
+            if (p is Peao)
             {
-                if(origem.Coluna != destino.Coluna && pecaCapturada == VulneravelEmPassant)
+                if (origem.Coluna != destino.Coluna && pecaCapturada == VulneravelEmPassant)
                 {
                     Peca peao = tab.RetirarPecas(destino);
                     Posicao PosPeao;
-                    if(p.Cores == Cor.Branca)
+                    if (p.Cores == Cor.Branca)
                     {
                         PosPeao = new Posicao(3, destino.Coluna);
                     }
@@ -142,9 +142,9 @@ namespace XadrezConsole.Xadrez
             }
             Peca p = tab.RetornaPeca(destino);
             //#Jogada especial - Promocao
-            if(p is Peao)
+            if (p is Peao)
             {
-                if((p.Cores == Cor.Branca && destino.Linha == 0) || (p.Cores == Cor.Preta && destino.Linha == 7))
+                if ((p.Cores == Cor.Branca && destino.Linha == 0) || (p.Cores == Cor.Preta && destino.Linha == 7))
                 {
                     p = tab.RetirarPecas(destino);
                     Pecas.Remove(p);
@@ -173,10 +173,10 @@ namespace XadrezConsole.Xadrez
                 MudaJogador();
             }
 
-            
+
 
             //#Jogada Especial - Em Passant
-            if(p is Peao && (destino.Linha == origem.Linha -2 || destino.Linha == origem.Linha + 2))
+            if (p is Peao && (destino.Linha == origem.Linha - 2 || destino.Linha == origem.Linha + 2))
             {
                 VulneravelEmPassant = p;
             }

@@ -72,7 +72,7 @@ namespace XadrezConsole.Xadrez
                     Posicao p1 = new Posicao(Posicoes.Linha, Posicoes.Coluna + 1);
                     Posicao p2 = new Posicao(Posicoes.Linha, Posicoes.Coluna + 2);
 
-                    if(Tab.RetornaPeca(p1) == null && Tab.RetornaPeca(p2) == null)
+                    if (Tab.RetornaPeca(p1) == null && Tab.RetornaPeca(p2) == null)
                     {
                         mat[Posicoes.Linha, Posicoes.Coluna + 2] = true;
                     }

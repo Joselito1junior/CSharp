@@ -48,13 +48,13 @@ namespace XadrezConsole.Xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
-            
+
             pos.DefinirValores(Posicoes.Linha + 2, Posicoes.Coluna - 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
-            
+
             pos.DefinirValores(Posicoes.Linha + 1, Posicoes.Coluna - 2);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
