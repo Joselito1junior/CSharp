@@ -24,12 +24,10 @@ namespace XadrezConsole.Tabuleiro
         {
             QtdMovimentos++;
         }
-
         public void DecrementarQtdMovimentos()
         {
             QtdMovimentos--;
         }
-
         public bool ExisteMovimentosPossiveis()
         {
             bool[,] mat = MovimentosPossiveis();
@@ -46,12 +44,10 @@ namespace XadrezConsole.Tabuleiro
             }
             return false;
         }
-
         public bool PodeMoverPara(Posicao pos)
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
-
         public abstract bool[,] MovimentosPossiveis();
     }
 }

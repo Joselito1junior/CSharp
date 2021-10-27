@@ -23,6 +23,7 @@ namespace XadrezConsole.Tabuleiro
             Coluna = coluna;
         }
 
+
         public override string ToString()
         {
             return Linha

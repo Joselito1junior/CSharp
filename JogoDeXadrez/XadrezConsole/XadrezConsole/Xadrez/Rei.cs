@@ -11,6 +11,7 @@ namespace XadrezConsole.Xadrez
         {
 
         }
+  
         private bool PodeMover(Posicao pos)
         {
             Peca p = Tab.RetornaPeca(pos);

@@ -11,6 +11,7 @@ namespace XadrezConsole.Xadrez
         {
 
         }
+        
         private bool PodeMover(Posicao pos)
         {
             Peca p = Tab.RetornaPeca(pos);
@@ -71,7 +72,6 @@ namespace XadrezConsole.Xadrez
 
             return mat;
         }
-
         public override string ToString()
         {
             return "T";
