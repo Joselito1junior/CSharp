@@ -97,7 +97,7 @@ namespace XadrezConsole.Xadrez
         }
         public void ValidarPosicaoDestino(Posicao origem, Posicao destino)
         {
-            if (!tab.RetornaPeca(origem).PodeMoverPara(destino))
+            if (!tab.RetornaPeca(origem).MovimentoPossivel(destino))
             {
                 throw new TabuleiroException("Posicão de destino Invalida");
             }
@@ -173,7 +173,7 @@ namespace XadrezConsole.Xadrez
                         {
                             Posicao origem = x.Posicoes;
                             Posicao destino = new Posicao(i, j);
-                            Peca pecaCapturada = ExecutaMovimento(x.Posicoes, destino);
+                            Peca pecaCapturada = ExecutaMovimento(origem, destino);
                             bool testeXeque = EstaEmXeque(cor);
                             DesfazMovimento(origem, destino, pecaCapturada);
 
