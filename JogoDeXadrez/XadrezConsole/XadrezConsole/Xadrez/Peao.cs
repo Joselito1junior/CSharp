@@ -40,13 +40,13 @@ namespace XadrezConsole.Xadrez
                 }
 
                 pos.DefinirValores(Posicoes.Linha - 1, Posicoes.Coluna - 1);
-                if (Tab.PosicaoValida(pos) && Livre(pos))
+                if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
 
                 pos.DefinirValores(Posicoes.Linha - 1, Posicoes.Coluna + 1);
-                if (Tab.PosicaoValida(pos) && Livre(pos))
+                if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
@@ -66,13 +66,13 @@ namespace XadrezConsole.Xadrez
                 }
 
                 pos.DefinirValores(Posicoes.Linha + 1, Posicoes.Coluna - 1);
-                if (Tab.PosicaoValida(pos) && Livre(pos))
+                if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
 
                 pos.DefinirValores(Posicoes.Linha + 1, Posicoes.Coluna + 1);
-                if (Tab.PosicaoValida(pos) && Livre(pos))
+                if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }

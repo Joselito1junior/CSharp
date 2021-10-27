@@ -98,7 +98,7 @@ namespace XadrezConsole
         static void ImprimirPeca(Peca peca)
         {
             if (peca == null)
-                Console.Write("* ");
+                Console.Write(". ");
             else
             {
                 if (peca.Cores == Cor.Branca)
