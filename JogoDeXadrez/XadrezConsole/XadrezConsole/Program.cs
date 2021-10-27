@@ -31,7 +31,7 @@ namespace XadrezConsole
 
                         Console.Clear();
                         Tela.ImprimrirTabuleiro(partida.tab, posicoesPossiveis);
-                        //Tela.ImprimrirTabuleiro(partida.tab);
+
 
                         Console.WriteLine();
                         Console.Write("Destino: ");

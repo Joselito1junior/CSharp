@@ -5,7 +5,7 @@ using XadrezConsole.Tabuleiro.Enums;
 
 namespace XadrezConsole.Xadrez
 {
-    class Torre : Rei
+    class Torre : Peca
     {
         public Torre(Cor cores, Tabuleiros tab) : base(cores, tab)
         {
